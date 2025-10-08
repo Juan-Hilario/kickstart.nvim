@@ -3,7 +3,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -115,11 +115,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-
--- Neotree keymap
-vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>')
-vim.api.nvim_set_keymap('i', '<S-Tab>', '<Plug>(emmet-expand-abbr)', { noremap = true, silent = true })
-
 -- Window resize keymap
 vim.keymap.set('n', '<C-S-Right>', '<C-w>>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-S-Left>', '<C-w><', { noremap = true, silent = true })
@@ -143,5 +138,3 @@ vim.api.nvim_create_autocmd('FileType', {
 -- Deletes Home and End key annoying misclick
 vim.keymap.set('i', '<Home>', '<Nop>')
 vim.keymap.set('i', '<End>', '<Nop>')
-
-

@@ -14,6 +14,8 @@ require('lazy').setup {
 
   require 'plugins.neotree',
 
+  require 'plugins.emmet',
+
   {
     'tingey21/telescope-colorscheme-persist.nvim',
     dependencies = { 'nvim-telescope/telescope.nvim' },
