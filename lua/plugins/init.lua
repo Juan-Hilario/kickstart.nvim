@@ -45,6 +45,13 @@ require('lazy').setup {
     end,
     dependencies = { { 'nvim-tree/nvim-web-devicons' } },
   },
+  {
+    'williamboman/mason.nvim',
+    opts = {},
+    config = function()
+      require('mason').setup()
+    end,
+  },
 
   {
     'nvim-zh/colorful-winsep.nvim',
@@ -162,6 +169,7 @@ require('lazy').setup {
   },
 
   require 'kickstart.plugins.indent_line',
+  require 'plugins.lsp',
 
   -- {
   --   ui = {
