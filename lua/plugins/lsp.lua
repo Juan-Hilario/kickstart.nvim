@@ -20,7 +20,19 @@ return {
 
       -- Mason setup
       require('mason').setup()
-      require('mason-lspconfig').setup { automatic_installation = true }
+      require('mason-lspconfig').setup {
+        automatic_installation = false,
+        ensure_installed = {
+          'lua_ls',
+          'ts_ls',
+          'html',
+          'cssls',
+          'jsonls',
+          'pyright',
+          'eslint',
+          'emmet_ls',
+        },
+      }
 
       -- Optional: Mason tool installer for CLI tools
       require('mason-tool-installer').setup {
@@ -33,7 +45,6 @@ return {
           'pyright',
           'eslint',
           'emmet_ls',
-          'stylua',
         },
       }
 

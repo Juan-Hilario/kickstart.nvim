@@ -1,6 +1,7 @@
 return {
   'nvim-telescope/telescope.nvim',
   branch = '0.1.x',
+
   dependencies = {
     'nvim-lua/plenary.nvim',
     {
@@ -18,6 +19,11 @@ return {
   },
   config = function()
     require('telescope').setup {
+      defaults = {
+        preview = {
+          treesitter = false,
+        },
+      },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
