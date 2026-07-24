@@ -35,7 +35,7 @@ require('lazy').setup {
   },
 
   -- Current Theme
-  require 'themes.melange',
+  require 'themes.olive-crt',
 
   {
     'nvimdev/dashboard-nvim',
@@ -169,11 +169,26 @@ require('lazy').setup {
     },
     init = function()
       local ensureInstalled = {
-        'lua',
-        'python',
-        'typescript',
+        'bash',
+        'c',
+        'diff',
         'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
         'javascript',
+        'typescript',
+        'jsx',
+        'tsx',
+        'json',
+        'css',
+        'scss',
+        'python',
+        'yuck',
 
         -- ... your parsers
       }

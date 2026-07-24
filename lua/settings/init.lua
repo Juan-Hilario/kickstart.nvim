@@ -122,15 +122,14 @@ vim.keymap.set('n', '<C-S-Up>', '<C-w>+', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-S-Down>', '<C-w>-', { noremap = true, silent = true })
 
 -- -- Disables Filetype indents
--- vim.cmd 'filetype indent off'
+vim.cmd 'filetype indent off'
 
--- Forces 2 spaces indents
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'html', 'css', 'json', 'jsx', 'tsx' },
   callback = function()
-    vim.bo.shiftwidth = 2 -- Number of spaces for each indent
-    vim.bo.tabstop = 2 -- Number of spaces a tab counts for
-    vim.bo.softtabstop = 2 -- How many spaces a tab feels like in insert mode
+    vim.bo.shiftwidth = 4 -- Number of spaces for each indent
+    vim.bo.tabstop = 4 -- Number of spaces a tab counts for
+    vim.bo.softtabstop = 4 -- How many spaces a tab feels like in insert mode
     vim.bo.expandtab = true -- Always use spaces, never tabs
   end,
 })
